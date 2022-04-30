@@ -1,4 +1,5 @@
-document.querySelector('#trafficLight');
+
+let trafficLight = document.querySelector('.trafficLight');
 
 function makeGreen() {
     trafficLight.style.background = ('green');
