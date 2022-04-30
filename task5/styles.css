@@ -1,0 +1,25 @@
+#clear {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #216423;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(184, 184, 184);
+
+}
+
+#clear:hover {
+    background-color: #3e8e41
+}
+
+#clear:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
