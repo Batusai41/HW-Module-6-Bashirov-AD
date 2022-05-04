@@ -1,22 +1,6 @@
-.trafficLight {
-  width: 100px;
-  height: 100px;
-  border: 3px solid #fff;
-  border-radius: 50%;
-}
-
-.trafficLight--green {
-  background-color: green;
-}
-
-.trafficLight--yellow {
-  background-color: yellow;
-}
-
-.trafficLight--red {
-  background-color: red;
-}
-
-.trafficLight:not([active]) {
-  background-color: black;
+#trafficLight {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: black;
 }
