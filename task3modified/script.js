@@ -1,18 +1,18 @@
-const trafficLight = document.querySelector(selectors: '.root')
+const trafficLight = document.querySelector('.root')
 const trafficLightChildren = trafficLight.children
 const trafficLightsLength = trafficLightChildren.length
 let count = 0
 
 const makeColor = () => {
-    if(count >= trafficLightsLength){
+    if (count >= trafficLightsLength) {
         count = 0
     }
-    for (let i = 0; i < trafficLightsLength; i++){
-        i === count 
-        ? trafficLightChildren[i].setAttribute(qualifiedName: 'active', value:  'true')
-        : trafficLightChildren[i].removeAttribute(qualifiedName: 'active')
+    for (let i = 0; i < trafficLightsLength; i++) {
+        i === count ?
+            trafficLightChildren[i].setAttribute('active', 'true') :
+            trafficLightChildren[i].removeAttribute('active')
     }
     count++
 }
 
-trafficLight.addEventListener(type: 'click' , makeColor)
+trafficLight.addEventListener('click', makeColor)
