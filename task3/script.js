@@ -1,22 +1,18 @@
+const trafficLight = document.querySelector(selectors: '.root')
+const trafficLightChildren = trafficLight.children
+const trafficLightsLength = trafficLightChildren.length
+let count = 0
 
-let trafficLight = document.querySelector('.trafficLight');
-
-function makeGreen() {
-    trafficLight.style.background = ('green');
-    trafficLight.removeEventListener('click', makeGreen);
-    trafficLight.addEventListener('click', makeYellow);
+const makeColor = () => {
+    if(count >= trafficLightsLength){
+        count = 0
+    }
+    for (let i = 0; i < trafficLightsLength; i++){
+        i === count 
+        ? trafficLightChildren[i].setAttribute(qualifiedName: 'active', value:  'true')
+        : trafficLightChildren[i].removeAttribute(qualifiedName: 'active')
+    }
+    count++
 }
 
-function makeYellow() {
-    trafficLight.style.background = ('yellow');
-    trafficLight.removeEventListener('click', makeYellow);
-    trafficLight.addEventListener('click', makeRed);
-}
-
-function makeRed() {
-    trafficLight.style.background = ('red');
-    trafficLight.removeEventListener('click', makeRed);
-    trafficLight.addEventListener('click', makeGreen);
-}
-
-trafficLight.addEventListener('click', makeGreen);
+trafficLight.addEventListener(type: 'click' , makeColor)
